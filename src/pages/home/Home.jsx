@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Nav from "../../components/nav/Nav.jsx";
 import bg from "../../assets/bg0.gif";
 import "./Home.css";
 import { category } from "../../category.js";
@@ -50,9 +49,3 @@ function Home() {
 }
 
 export default Home;
-
-//  id: 1,
-//     name: "Samsung Galaxy M14 5G",
-//     price: 13999,
-//     category: "Electronics",
-//     image: image1,

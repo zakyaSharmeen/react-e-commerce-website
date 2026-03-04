@@ -1,13 +1,12 @@
 import React from "react";
 import { FaShopify } from "react-icons/fa6";
-import { IoSearchOutline } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Nav() {
-  let dispatch = useDispatch();
+  // let dispatch = useDispatch();
   let items = useSelector((state) => state);
   console.log(items);
 
@@ -18,13 +17,6 @@ function Nav() {
           <span>V-Shop</span>
           <FaShopify />
         </Link>
-
-        <form className="search-box">
-          <input type="text" placeholder="Search Items.." />
-          <button>
-            <IoSearchOutline />
-          </button>
-        </form>
 
         <Link to="/cart" className="cart-box">
           <FiShoppingCart />
@@ -44,19 +36,6 @@ function Nav() {
         <Link to="/contact">
           <li>Contact</li>
         </Link>
-
-        {/* <>
-          <li>Home</li>
-        </>
-        <>
-          <li>Shop</li>
-        </>
-        <>
-          <li>Cart</li>
-        </>
-        <>
-          <li>Contact</li>
-        </> */}
       </div>
     </div>
   );
