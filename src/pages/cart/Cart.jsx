@@ -1,8 +1,8 @@
 import React from "react";
-import CartCard from "../../components/cartCard/cartCard.jsx";
 import { useSelector } from "react-redux";
 import empty from "../../assets/emptycart.png";
 import "./Cart.css";
+import CartCard from "../../components/cartCard/CartCard.jsx";
 
 function Cart() {
   let items = useSelector((state) => state);
@@ -15,7 +15,7 @@ function Cart() {
           <h1>Cart is Empty</h1>
         </div>
       ) : (
-        <div className="cartCard-sectio">
+        <div className="cartCard-section">
           {items.cart.map((item, index) => (
             <CartCard
               key={index}
